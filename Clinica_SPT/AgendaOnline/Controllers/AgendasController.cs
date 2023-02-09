@@ -49,8 +49,8 @@ namespace AgendaOnline.Controllers
         // GET: Agendas/Create
         public IActionResult Create()
         {
-            ViewData["HorarioId"] = new SelectList(_context.Set<Horario>(), "HorarioId", "HorarioId");
-            ViewData["PacienteId"] = new SelectList(_context.Set<Paciente>(), "PacienteId", "PacienteId");
+            ViewData["HorarioId"] = new SelectList(_context.Set<Horario>(), "HorarioId", "HorarioConsulta");
+            ViewData["PacienteId"] = new SelectList(_context.Set<Paciente>(), "PacienteId", "NomePaciente");
             return View();
         }
 

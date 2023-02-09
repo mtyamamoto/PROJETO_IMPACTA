@@ -67,8 +67,8 @@ namespace AgendaOnline.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ConsultorioId"] = new SelectList(_context.Consultorio, "IdConsultorio", "IdConsultorio", horario.ConsultorioId);
-            ViewData["EspecialistaId"] = new SelectList(_context.Especialista, "EspecialistaId", "EspecialistaId", horario.EspecialistaId);
+            ViewData["ConsultorioId"] = new SelectList(_context.Consultorio, "IdConsultorio", "NumSala", horario.ConsultorioId);
+            ViewData["EspecialistaId"] = new SelectList(_context.Especialista, "EspecialistaId", "EspecialistaNome", horario.EspecialistaId);
             return View(horario);
         }
 
