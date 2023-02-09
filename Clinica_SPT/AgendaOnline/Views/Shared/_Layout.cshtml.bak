@@ -1,7 +1,4 @@
-﻿@{
-    string username = User.Identity.Name;
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,34 +22,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        @if (!string.IsNullOrEmpty(username))
-                        { //}
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Agendas" asp-action="Index">Agenda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Especialidades" asp-action="Index">Especialidades</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Especialistas" asp-action="Index">Especialistas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Index">Pacientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Horarios" asp-action="Index">Horários</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Consultorios" asp-action="Index">Consultórios</a>
-                            </li>
-                            
-                        }
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Agendas" asp-action="Index">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Especialidades" asp-action="Index">Especialidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Especialistas" asp-action="Index">Especialistas</a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
-                    
                 </div>
             </div>
         </nav>

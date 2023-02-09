@@ -11,6 +11,8 @@ namespace AgendaOnline.Models
         [Display(Name ="Número do Conselho - CRM/CRP/... ")]
 
         public string CRM { get; set; }
+        [Display(Name = "Especialidade do Profissional ")]
+
 
         public int EspecialidadeId { get; set; }
 

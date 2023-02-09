@@ -48,7 +48,7 @@ namespace AgendaOnline.Controllers
         // GET: Especialistas/Create
         public IActionResult Create()
         {
-            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeId");
+            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeNome");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace AgendaOnline.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeId", especialista.EspecialidadeId);
+            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeNome", especialista.EspecialidadeId);
             return View(especialista);
         }
 
@@ -82,7 +82,7 @@ namespace AgendaOnline.Controllers
             {
                 return NotFound();
             }
-            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeId", especialista.EspecialidadeId);
+            ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "EspecialidadeId", "EspecialidadeNome", especialista.EspecialidadeId);
             return View(especialista);
         }
 
